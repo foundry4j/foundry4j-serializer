@@ -31,9 +31,6 @@
         <maven.compiler.release>27</maven.compiler.release>
         <junit.version>5.14.4</junit.version>
 
-        <!-- Default value; the JaCoCo agent overrides this during the initialize phase. -->
-        <surefireArgLine></surefireArgLine>
-
         <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.6.1</maven-surefire-plugin.version>
         <maven-jar-plugin.version>3.5.1</maven-jar-plugin.version>
@@ -69,7 +66,6 @@
                         </goals>
                         <configuration>
                             <destFile>${project.build.directory}/jacoco.exec</destFile>
-                            <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
                     <execution>
@@ -102,7 +98,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <argLine>${surefireArgLine} --add-modules jdk.incubator.vector</argLine>
+                    <argLine>${argLine} --add-modules jdk.incubator.vector</argLine>
                     <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
