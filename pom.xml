@@ -9,6 +9,7 @@
     <packaging>jar</packaging>
     <name>Foundry4J Serializer</name>
     <description>A compact, zero-dependency binary serialization framework for Java 27.</description>
+    <url>https://github.com/foundry4j/foundry4j-serializer</url>
 
     <scm>
         <connection>scm:git:git://github.com/foundry4j/foundry4j-serializer.git</connection>
